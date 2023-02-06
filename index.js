@@ -1,8 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-// const request = require("request");
-// const https = require("https");
 const mongoose = require("mongoose");
 const _ = require("lodash");
 
@@ -153,7 +151,6 @@ app.get("/:listName", function(req, res) {
     }
   })
 });
-
 
 
 app.listen(process.env.PORT || 3000, function() {
