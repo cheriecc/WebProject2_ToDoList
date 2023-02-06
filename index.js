@@ -15,8 +15,8 @@ mongoose.set('strictQuery', false);
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended: true}));
-const dbUserName = process.env.Username;
-const dbPassword = process.env.Password;
+const dbUserName = process.env.Username || "admin-cherie";
+const dbPassword = process.env.Password || "test123456789";
 
 
 // Create DB and item collection
@@ -157,5 +157,5 @@ app.get("/:listName", function(req, res) {
 
 
 app.listen(process.env.PORT || 3000, function() {
-  console.log("Server started on port 3000");
+  console.log("Server started");
 });
