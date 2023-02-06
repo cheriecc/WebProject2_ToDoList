@@ -15,9 +15,8 @@ mongoose.set('strictQuery', false);
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended: true}));
-const dbUserName = process.env["Username"]
-const dbPassword = process.env["Password"]
-
+const dbUserName = process.env["Username"];
+const dbPassword = process.env["Password"];
 
 
 // Create DB and item collection
